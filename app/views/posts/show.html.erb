@@ -30,7 +30,7 @@ Users: <br />
 
 
 
-<%=form_for comment do |f|%>
+<%=form_for(@post.comments.build) do |f|%>
   <br><br>
     <%=f.label :content%>
     <%=f.text_area :content%>
@@ -39,7 +39,7 @@ Users: <br />
 
     <%=f.collection_select  :user_id, User.all,  :id, :username, include_blank: true%>
 
-    <%=f.fields_for :user, comment.user.build do |u|%>
+    <%=f.fields_for :user do |u|%>
       <%= u.text_field :username%>
     <%end%>
 
