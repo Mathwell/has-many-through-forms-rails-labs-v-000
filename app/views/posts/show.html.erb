@@ -1,6 +1,6 @@
 <h1><%=@post.title%></h1>
 
-<p><%=@post.content%></p>
+<p>Content: <%=@post.content%></p>
 
 Categories: <br />
 <ul>
@@ -14,7 +14,7 @@ Comments: <br />
 
   <%@post.comments.each do |c|%>
    <li>
-     <%=c.user.username%> says: <%=c.content%>%>
+     <%=link_to c.user.username, user_path(c.user)%> says: <%=c.content%>%>
    </li>
   <%end%>
 
