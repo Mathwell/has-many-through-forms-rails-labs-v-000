@@ -14,14 +14,11 @@ Comments: <br />
 
   <%@post.comments.each do |c|%>
    <li>
-     <%=link_to c.user.username, user_path(c.user)%> says: <%=c.content%>%>
+     <%=c.user.username%> says: <%=c.content%>%>
    </li>
   <%end%>
 
 </ul>
-
-
-
 
 Users: <br />
 <ul>
