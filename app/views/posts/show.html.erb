@@ -42,6 +42,7 @@ Users: <br />
     <%=f.fields_for :user do |user_builder|%>
       <%= user_builder.text_field :username%>
     <%end%>
+    <input type="text" name="comment[user_attributes][username]" id="comment_user_attributes_username">
 
  <%=f.submit%>
  <%end%>
