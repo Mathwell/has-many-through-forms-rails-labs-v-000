@@ -39,7 +39,7 @@ Users: <br />
 
     <%=f.collection_select  :user_id, User.all,  :id, :username, include_blank: true%>
 
-    <%=f.field_for :user  @comment.user.build do |user_builder|%>
+    <%=f.fields_for :user  @comment.user.build do |user_builder|%>
       <%= user_builder.text_field :username%>
     <%end%>
 
